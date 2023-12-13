@@ -57,38 +57,48 @@ const DataTable = () => {
 
     };
 
+    const renderWeekNames = () => {
+        const weekNames = ['Пн', 'Ср', 'Пт'];
+        return weekNames.map((day, index) => <td className='thead' key={index}>{day}</td>);
+    };
+
     return (
         <div className='app'>
-            <table>
-                <thead>
-                    <tr>{renderTHead()}</tr>
-                </thead>
-                <tbody>
-                    {tableContent.map((rowData, rowIndex) => (
-                        <tr key={rowIndex}>
-                            {rowData.map((cellData, cellIndex) => (
-                                <>
-                                    <td
-                                        className={`td ${matchData(cellData) ? getContributionColor(data[cellData]) : ''}`}
-                                        key={cellIndex}
-                                        data-tooltip={getTooltipText(cellData)}
-                                    ></td>
-                                </>
-                            ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            <div className='contribution-nav'>
-                <span className='span'>Меньше</span>
-                <div className='contribution-row'>
-                    <div className='cell gray'></div>
-                    <div className='cell blue-200'></div>
-                    <div className='cell blue-300'></div>
-                    <div className='cell blue-400'></div>
-                    <div className='cell blue-500'></div>
+            <div className='weeks'>
+                {renderWeekNames()}
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>{renderTHead()}</tr>
+                    </thead>
+                    <tbody>
+                        {tableContent.map((rowData, rowIndex) => (
+                            <tr key={rowIndex}>
+                                {rowData.map((cellData, cellIndex) => (
+                                    <>
+                                        <td
+                                            className={`td ${matchData(cellData) ? getContributionColor(data[cellData]) : ''}`}
+                                            key={cellIndex}
+                                            data-tooltip={getTooltipText(cellData)}
+                                        ></td>
+                                    </>
+                                ))}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                <div className='contribution-nav'>
+                    <span className='span'>Меньше</span>
+                    <div className='contribution-row'>
+                        <div className='cell gray'></div>
+                        <div className='cell blue-200'></div>
+                        <div className='cell blue-300'></div>
+                        <div className='cell blue-400'></div>
+                        <div className='cell blue-500'></div>
+                    </div>
+                    <span className='span'>Больше</span>
                 </div>
-                <span className='span'>Больше</span>
             </div>
         </div>
     )

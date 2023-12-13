@@ -14,6 +14,8 @@ code {
 
 .app {
   margin: 40px;
+  display: flex;
+  flex-direction: row;
 }
 
 .thead {
@@ -88,4 +90,12 @@ code {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.weeks {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 5px;
 }
