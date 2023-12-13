@@ -70,10 +70,8 @@ const DataTable = () => {
                                 <>
                                     <td
                                         className={`td ${matchData(cellData) ? getContributionColor(data[cellData]) : ''}`}
-
                                         key={cellIndex}
-                                        title={getTooltipText(cellData)}
-                                        data-tooltip 
+                                        data-tooltip={getTooltipText(cellData)}
                                     ></td>
                                 </>
                             ))}
