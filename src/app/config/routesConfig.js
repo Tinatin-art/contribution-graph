@@ -1,12 +1,12 @@
 import React from "react";
-import Contribute from "../page/Contribute";
+import DataTable from "../page/DataTable";
 
 
 const routes = [
   {
     path: "/",
-    element: <Contribute />,
-  },
+    element: <DataTable/>
+  }
 ];
 
 export default routes;

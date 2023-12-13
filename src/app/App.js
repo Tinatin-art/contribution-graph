@@ -1,4 +1,3 @@
-import '../styles/main.scss';
 import withAppProviders from './withAppProviders';
 import BrowserRouter from './setup/core/browserRouter';
 import Layout from './config';

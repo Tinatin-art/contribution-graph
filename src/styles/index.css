@@ -11,3 +11,80 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app {
+  margin: 40px;
+}
+
+.thead {
+  color: #959494;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.td {
+  width: 15px;
+  height: 15px;
+  background-color: #EDEDED;
+}
+
+[data-tooltip]:hover::after {
+  content: attr(title);
+  display: block;
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.cell {
+  width: 15px;
+  height: 15px;
+}
+.gray { 
+  background-color: #EDEDED;
+}
+
+.blue-200 {
+  background-color: #ACD5F2;
+}
+
+.blue-300 {
+  background-color: #7FA8C9;
+}
+
+.blue-400 {
+  background-color: #527BA0;
+}
+
+.blue-500 {
+  background-color: #254E77;
+}
+
+.contribution-nav {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contribution-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 10px;
+  gap: 1.5px;
+}
+.span {
+  display: inline-block;
+  color: #959494;
+  font-family: Inter;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
