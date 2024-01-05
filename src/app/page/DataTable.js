@@ -14,7 +14,7 @@ const DataTable = () => {
 
     useEffect(() => {
         dispatch(getData())
-    }, [])
+    }, [dispatch])
 
 
     const [tableContent, setTableContent] = useState([]);
